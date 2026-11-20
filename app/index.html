@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice City Heat — Cinematic Key-Art Cover Studio</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls" aria-label="Cover controls">
+    <h1>Vice City Heat</h1>
+    <p class="tagline">Cinematic key-art cover studio — midday Miami, hot pink &amp; deep teal. Your photo, your words, one click to a poster.</p>
+
+    <fieldset>
+      <legend>Layout</legend>
+      <div id="layoutRow" class="chips"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Midday grade</legend>
+      <div id="gradeRow" class="chips"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Post size</legend>
+      <div id="sizeRow" class="chips"></div>
+    </fieldset>
+
+    <label>Title <input id="title" type="text" maxlength="24" value="VICE CITY HEAT"></label>
+    <label>Subtitle <input id="subtitle" type="text" maxlength="40" value="Midday in Leonida"></label>
+    <label>Date line <input id="date" type="text" maxlength="24" value="NOV 19 2026"></label>
+
+    <fieldset>
+      <legend>Panels — load your photo, or pick a scene</legend>
+      <div id="panels"></div>
+      <p class="hint">Drag a photo inside its panel to reframe it. Scroll over a panel to zoom. “Fill all panels” puts one scene across the whole cover.</p>
+    </fieldset>
+
+    <button id="export" type="button">Export PNG</button>
+    <div class="sizes">
+      <button id="export-1080x1080" type="button">1080 × 1080</button>
+      <button id="export-1080x1350" type="button">1080 × 1350</button>
+      <button id="export-1920x1080" type="button">1920 × 1080</button>
+    </div>
+    <p id="status" role="status"></p>
+    <p class="fine">Offline — your photos never leave this machine. All art is drawn in the app; no Rockstar logo, artwork or fonts.</p>
+  </section>
+  <section class="preview" aria-label="Live cover preview">
+    <canvas id="cover" width="1080" height="1350" aria-label="The cover"></canvas>
+    <p class="preview-note">Live preview — what you see is the PNG you export.</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
